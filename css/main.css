@@ -168,24 +168,28 @@ hr {
 
 p {
     margin: 1rem 0;
-
-    > ul {
-
-    }
 }
 
+ul {
+    list-style-type: '🦊';
+    margin: 0;
+    padding-left: 2ch;
+}
+
+/* Footer */
 .footer-padding {
     padding: 1rem
 }
-
 time {
     /* Inline alignment with <span> */
     display: flex;
     justify-content: space-between;
 }
-
-ul {
-    list-style-type: '🦊';
+#Copyright_notice p {
+    font-size: 0.66rem;
+    text-align: center;
+    margin: 0.33rem;
+    padding: 0;
 }
 
 a:link {
