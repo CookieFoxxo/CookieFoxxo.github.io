@@ -138,7 +138,7 @@ time {
     display: flex;
     justify-content: space-between;
 }
-#Copyright_notice p {
+#Copyright_notice > p {
     font-size: 0.66rem;
     text-align: center;
     margin: 0.33rem;
