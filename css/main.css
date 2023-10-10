@@ -1,0 +1,205 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto+Mono&family=Material+Symbols+Outlined:FILL@1);
+:root {
+    /* Variables */
+    --background-dark: black;
+    --background-light: #202020;
+
+    --gradient-source: orangered, saddlebrown;
+    --gradient: linear-gradient(to right, var(--gradient-source));
+}
+
+/* Header animation keyframes */
+@keyframes typingText {
+    from {width: 0}
+    to {width: 9ch}
+}
+@keyframes typingCursor {
+    0% {border-right-color: saddlebrown;}
+    49% {border-right-color: saddlebrown;}
+    50% {border-right-color: transparent;}
+}
+
+
+body {
+    background-color: var(--background-dark);
+    font-family: 'Roboto Slab';
+    color: white;
+    text-align: justify;
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+
+
+/* responsivness section */
+    header {
+        overflow: hidden;
+
+        background-color: var(--background-light);
+        margin: 1rem auto;
+        border-radius: 1rem;
+
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+        
+        > img {
+            max-width: 50%;
+        }
+    }
+
+    h1 {
+        font-size: 4rem;
+        
+    }
+
+    main {
+        background-color: var(--background-light);
+        margin: 1rem auto;
+        border-radius: 1rem;
+    }
+
+    footer {
+        background-color: var(--background-light);
+        margin: 1rem auto;
+        border-radius: 1rem;
+    }
+    @media only screen and (min-width: 600px) {
+        header {
+            background-color: var(--background-light);
+            max-width: 80%;
+            margin: 1rem auto;
+            border-radius: 1rem;
+
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            align-items: center;
+            
+            > img {
+                max-width: 50%;
+            }
+        }
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        main {
+            background-color: var(--background-light);
+            max-width: 80%;
+            margin: 1rem auto;
+            border-radius: 1rem;
+        }
+
+        footer {
+            background-color: var(--background-light);
+            max-width: 80%;
+            margin: 1rem auto;
+            border-radius: 1rem;
+        } 
+    }
+    @media only screen and (min-width: 768px) {
+        h1 {
+            font-size: 5rem;
+        }
+    }
+    @media only screen and (min-width: 992px) {
+        header {
+            flex-direction: row;
+
+            > img {
+                max-width: 25%;
+            }
+        }
+    }
+    @media only screen and (min-width: 1200px) {
+        header {
+            max-width: 70%;
+        }
+
+        main {
+            max-width: 70%;
+        }
+
+        footer {
+            max-width: 70%;
+        }
+    }
+/* end responsivness section */
+
+section {
+    padding: 1rem;
+}
+
+h1 {
+    font-family: "Roboto Mono";
+
+    margin: 1rem;
+
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-right: 2px solid saddlebrown;
+    animation:
+        typingText 2.25s steps(9) 1s 1 normal both,
+        typingCursor 1060ms step-end infinite;
+}
+h2 {
+    font-family: "Roboto Mono";
+    font-size: 2.5rem;
+
+    margin: 0;
+    padding: 0;
+
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+hr {
+    margin:0;
+    border: 0;
+    background: var(--gradient);
+    height: 1ex;
+}
+
+p {
+    margin: 1rem 0;
+
+    > ul {
+
+    }
+}
+
+.footer-padding {
+    padding: 1rem
+}
+
+time {
+    /* Inline alignment with <span> */
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    list-style-type: '🦊';
+}
+
+a:link {
+    color: darkorange;
+    text-decoration: none;
+}
+a:visited {
+    color: saddlebrown;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:active {
+    color:orangered;
+    text-decoration: underline;
+}   

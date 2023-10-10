@@ -1,0 +1,60 @@
+:root {
+    /* SAME RULES AS FOR THE VARIABLES IN "main.css" */
+    --background-dark: black;
+    --background-light: #202020;
+
+    --gradient-source: orangered, saddlebrown;
+    --gradient: linear-gradient(to right, var(--gradient-source));
+}
+
+.project-cells {
+        margin: 1rem 0 0;
+        gap: 1rem;
+        display: grid;
+            grid-template-columns: repeat(1, 1fr);
+        @media only screen and (min-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media only screen and (min-width: 1200px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+
+    > figure {
+        display: inline-flex;
+        margin: 0;
+        border: double 0.5ex transparent;
+        border-radius: 1rem;
+        background-image: linear-gradient(var(--background-light), var(--background-light)), var(--gradient);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        
+        > a {
+            color: white;
+            text-decoration: none;
+
+            > img {
+                padding: 1rem;
+                max-width: calc(100% - 2rem);
+            }
+            > hr {
+                height: 0.5ex;
+                width: 100%;
+                margin: auto 0;
+            }
+            > figcaption {
+                padding: 1rem;
+                text-align: left;
+            }
+        }
+    }
+}
+
+#Contacts th, td {
+        border: 1px solid white;
+        vertical-align: middle;
+        padding: 0.5em 1em;
+    }
+#Contacts table img {
+    height: 1em;
+}
