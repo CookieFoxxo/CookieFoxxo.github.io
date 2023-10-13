@@ -1,4 +1,5 @@
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto+Mono&family=Material+Symbols+Outlined:FILL@1);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto+Mono);
+@import url();
 :root {
     /* Variables */
     --background-dark: black;
@@ -132,25 +133,8 @@ body {
     }
 /* end responsivness section */
 
-/* footer section */
-.footer-padding {
-    padding: 1rem
-}
-time {
-    /* Inline alignment with <span> */
-    display: flex;
-    justify-content: space-between;
-}
-#Copyright_notice > p {
-    font-size: 0.66rem;
-    text-align: center;
-    margin: 0.33rem;
-    padding: 0;
-}
-/* end footer section */
-
-section {
-    padding: 1rem;
+header a:link {
+    text-decoration: none;
 }
 
 h1 {
@@ -179,12 +163,29 @@ h2 {
     text-align: center;
 }
 
+section, .padding {
+    padding: 1rem
+}
+
 hr {
     margin:0;
     border: 0;
     background: var(--gradient);
     height: 1ex;
 }
+
+/* footer section */
+.inline-alignment {
+    display: flex;
+    justify-content: space-between;
+}
+#Copyright_notice  p {
+    font-size: 0.66rem;
+    text-align: center;
+    margin: 0.33rem;
+    padding: 0;
+}
+/* end footer section */
 
 p {
     margin: 1rem 0;

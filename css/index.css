@@ -50,11 +50,12 @@
     }
 }
 
-#Contacts th, td {
-        border: 1px solid white;
-        vertical-align: middle;
-        padding: 0.5em 1em;
-    }
-#Contacts table img {
-    height: 1em;
+#Contacts table {
+    border: 0px solid white;
+    vertical-align: middle;
+    padding: -1ch;
+}
+#Contacts td:first-child {
+    padding-right: 1ch;
+    text-align: center;
 }
