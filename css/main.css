@@ -21,7 +21,7 @@
 }
 
 
-body {
+html {
     background-color: var(--background-dark);
     font-family: 'Roboto Slab';
     color: white;
@@ -30,75 +30,53 @@ body {
     margin: 0;
 }
 
+header {
+    overflow: hidden;
 
+    background-color: var(--background-light);
+    margin: 1rem auto;
+    border-radius: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    background-color: var(--background-light);
+    margin: 1rem auto;
+    border-radius: 1rem;
+}
+
+footer {
+    background-color: var(--background-light);
+    margin: 1rem auto;
+    border-radius: 1rem;
+}
 
 /* responsivness section */
-    header {
-        overflow: hidden;
-
-        background-color: var(--background-light);
-        margin: 1rem auto;
-        border-radius: 1rem;
-
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: space-between;
-        align-items: center;
-        
-        > img {
-            max-width: 50%;
-        }
-    }
-
-    h1 {
-        font-size: 4rem;
-    }
-
-    main {
-        background-color: var(--background-light);
-        margin: 1rem auto;
-        border-radius: 1rem;
-    }
-
-    footer {
-        background-color: var(--background-light);
-        margin: 1rem auto;
-        border-radius: 1rem;
-    }
-
-    @media only screen and (min-width: 600px) {
         header {
-            background-color: var(--background-light);
-            max-width: 80%;
-            margin: 1rem auto;
-            border-radius: 1rem;
-
-            display: flex;
             flex-direction: column-reverse;
-            justify-content: space-between;
-            align-items: center;
             
             > img {
                 max-width: 50%;
             }
         }
-
         h1 {
             font-size: 4rem;
         }
 
-        main {
-            background-color: var(--background-light);
+    @media only screen and (min-width: 600px) {
+        header {
             max-width: 80%;
-            margin: 1rem auto;
-            border-radius: 1rem;
+        }
+
+        main {
+            max-width: 80%;
         }
 
         footer {
-            background-color: var(--background-light);
             max-width: 80%;
-            margin: 1rem auto;
-            border-radius: 1rem;
         } 
     }
 
@@ -175,20 +153,29 @@ hr {
 }
 
 /* footer section */
-.inline-alignment {
-    display: flex;
-    justify-content: space-between;
-}
-#Copyright_notice  p {
-    font-size: 0.66rem;
+#date {
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 0;
     text-align: center;
-    margin: 0.33rem;
+}
+#date td:first-child {
+    text-align: left;
+}
+#date td:last-child {
+    text-align: right;
+}
+
+#copyright-notice  p {
+    font-size:x-small;
+    text-align: center;
+    margin: 0.25rem 0;
     padding: 0;
 }
 /* end footer section */
 
 p {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
 }
 
 ul {
