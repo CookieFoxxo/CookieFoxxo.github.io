@@ -1,9 +1,9 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto+Mono);
-@import url();
 :root {
     /* Variables */
-    --background-dark: black;
-    --background-light: #202020;
+    --background-dark: #121212;
+    --background-light: #1f1f1f;
+    --text-color: white;
 
     --gradient-source: orangered, saddlebrown;
     --gradient: linear-gradient(to right, var(--gradient-source));
@@ -21,13 +21,13 @@
 }
 
 
-html {
+body {
     background-color: var(--background-dark);
-    font-family: 'Roboto Slab';
-    color: white;
+    font-family: 'Roboto Slab', serif;
+    color: var(--text-color);
     text-align: justify;
     scroll-behavior: smooth;
-    margin: 0;
+    margin: 1rem;
 }
 
 header {
@@ -55,60 +55,59 @@ footer {
 }
 
 /* responsivness section */
-        header {
-            flex-direction: column-reverse;
-            
-            > img {
-                max-width: 50%;
-            }
-        }
-        h1 {
-            font-size: 4rem;
-        }
-
-    @media only screen and (min-width: 600px) {
-        header {
-            max-width: 80%;
-        }
-
-        main {
-            max-width: 80%;
-        }
-
-        footer {
-            max-width: 80%;
-        } 
-    }
-
-    @media only screen and (min-width: 768px) {
-        h1 {
-            font-size: 5rem;
+    header {
+        flex-direction: column-reverse;
+        > img {
+            max-width: 50%;
         }
     }
-
-    @media only screen and (min-width: 992px) {
-        header {
-            flex-direction: row;
-
-            > img {
-                max-width: 25%;
-            }
-        }
+    h1 {
+        font-size: 4rem;
     }
 
-    @media only screen and (min-width: 1200px) {
-        header {
-            max-width: 70%;
-        }
+@media only screen and (min-width: 600px) {
+    header {
+        max-width: 80%;
+    }
 
-        main {
-            max-width: 70%;
-        }
+    main {
+        max-width: 80%;
+    }
 
-        footer {
-            max-width: 70%;
+    footer {
+        max-width: 80%;
+    } 
+}
+
+@media only screen and (min-width: 768px) {
+    h1 {
+        font-size: 5rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    header {
+        flex-direction: row;
+
+        > img {
+            max-width: 25%;
         }
     }
+}
+
+@media only screen and (min-width: 1200px) {
+    header {
+        max-width: 70%;
+    }
+
+    main {
+        max-width: 70%;
+    }
+
+    footer {
+        max-width: 70%;
+    }
+}
 /* end responsivness section */
 
 header a:link {
@@ -116,7 +115,7 @@ header a:link {
 }
 
 h1 {
-    font-family: "Roboto Mono";
+    font-family: "Roboto Mono", monospace;
 
     margin: 1rem;
 
@@ -153,18 +152,18 @@ hr {
 }
 
 /* footer section */
-#date {
+#timestamp {
     width: 100%;
     table-layout: fixed;
     border-spacing: 0;
     text-align: center;
 }
-#date td:first-child {
-    text-align: left;
-}
-#date td:last-child {
-    text-align: right;
-}
+    #timestamp td:first-child {
+        text-align: left;
+    }
+    #timestamp td:last-child {
+        text-align: right;
+    }
 
 #copyright-notice  p {
     font-size:x-small;
@@ -174,8 +173,50 @@ hr {
 }
 /* end footer section */
 
+/* figure section */
+.figure-grid {
+    margin: 1rem 0 0;
+    gap: 1rem;
+    display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    @media only screen and (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media only screen and (min-width: 1200px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+    figure img {
+        margin: 1rem;
+        max-width: calc(100% - 2rem);
+    }
+    figure {
+        display: inline-flex;
+        margin: 0;
+        border: double 0.5ex transparent;
+        border-radius: 1rem;
+        background-image: linear-gradient(var(--background-light), var(--background-light)), var(--gradient);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+    }
+    figure hr {
+        height: 0.5ex;
+        width: 100%;
+        margin: auto 0;
+    }
+    figcaption {
+        padding: 1rem;
+        text-align: left;
+    }
+    figure a {
+        color: var(--text-color) !important;
+        text-decoration: none !important;
+    }
+/* end figure section */
+
 p {
     margin: 0.5rem 0;
+    text-align: justify;
 }
 
 ul {
@@ -189,7 +230,7 @@ a:link {
     text-decoration: none;
 }
 a:visited {
-    color: saddlebrown;
+    color: hsl(25, 76%, 40%);
     text-decoration: none;
 }
 a:hover {

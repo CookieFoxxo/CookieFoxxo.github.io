@@ -10,11 +10,19 @@
         <meta name="keywords" content="CookieFox, projects, contacts, portfolio">
         <link rel="icon" type="image/x-icon" href="assets/cookiefoxLogo.png">
 
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/index.css">
-        <script src="https://kit.fontawesome.com/ee7f6939c6.js" crossorigin="anonymous"></script>
-
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/ee7f6939c6.js" crossorigin="anonymous"></script>    
         
+        <style>
+            #Contacts table {
+                vertical-align: middle;
+                padding: -1ch;
+            }
+            #Contacts td:first-child {
+                padding-right: 1ch;
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
         <header>
@@ -24,43 +32,47 @@
         <main>
             <section id="about-me">
                 <h2>About me</h2>
-                <p>My name is <span lang="cs">Kryštof</span>, I appear on the internet under the nickname "CookieFox". I'm a 17 y/o nerd from Czechia.
-                <br>I'm currently a student of a secondary technical school focused on engineering and electrotechnics.</p>
-                <p>You could say that I'm a jack of all trades, but a master of none; I have a wide range of things I am interested in.
+                <p>My name is <span lang="cs">Kryštof</span>, I&nbsp;appear on&nbsp;the&nbsp;internet under the&nbsp;nickname "CookieFox". I'm&nbsp;a&nbsp;17&nbsp;y/o nerd from&nbsp;Czechia.
+                <br>I'm currently a&nbsp;student of&nbsp;a&nbsp;secondary technical school of&nbsp;mechanical and&nbsp;electrical engineering. I'm&nbsp;still unsure about my future career path. I&nbsp;hope I'll&nbsp;see things more clearly before it's&nbsp;time for&nbsp;me to&nbsp;decide.</p>
+                <p>You could say that I'm a&nbsp;jack of&nbsp;all trades, but&nbsp;a&nbsp;master of&nbsp;none; I have a&nbsp;wide range of&nbsp;things I&nbsp;am interested&nbsp;in.
                     <br>That includes:
                     <ul>
                         <li>Coding and all things computery,</li>
                         <li>Politics,</li>
                         <li>Urban planning and road design,</li>
                         <li>Transit diagrams,</li>
-                        <li>ADD MORE</li>
+                        <li>Aviation,</li>
+                        <li>And much more.</li>
                     </ul>
+                </p>
             </section>
             <hr>
             <section id="projects">
                 <h2>Projects</h2>
-                <div class="project-cells">
+                <div class="figure-grid">
                     <figure><a href="projects/website.html">
-                        <img src="assets/fedorafox.png">
+                        <img src="assets/website.png" alt="Screenshot of this page's source code">
                         <hr>
                         <figcaption>This website. It was created as a graded project for my IT class, but I've wanted to make a website about myself anyway.</figcaption>
                     </a></figure>
                     <figure><a href="projects/photos.html">
-                        <img src="assets/foxscrem.jpg">
+                        <img src="assets/IMG_0350-edit-min.jpg" alt="A light painting photo of a traffic junction at night">
                         <hr>
-                        <figcaption>I've taken a few pictures with my DSLR camera that I'm really proud of.</figcaption>
+                        <figcaption>I've taken a few pictures with my DSLR camera that I'm quite proud of.</figcaption>
                     </a></figure>
-                    <figure><a href="projects/transit_diagram.html">
-                        <img src="assets/dpchjTrolejbusy.png">
+                    <figure><a href="projects/transit-diagram.html">
+                        <img src="assets/dpchjTrolejbusy.png" alt="Screenshot of a work-in-progress transit diagram">
                         <hr>
-                        <figcaption>My hometown's public transport company's trolleybus network as a subway-styled transit diagram.</figcaption>
+                        <figcaption>(WIP) My hometown's public transport company's trolleybus network as a subway-styled transit diagram.</figcaption>
                     </a></figure>
                 </div>
             </section>
             <hr>
             <section id="contacts">
-                <h2>Contacts</h2>
-                <p></p>
+                <p>If you have any&nbsp;questions or&nbsp;even if&nbsp;you just wanna chat, hit&nbsp;me&nbsp;up.</p>
+                <p>Don't worry, I don't bite.
+                    <br>Well&mdash; not usually, anyway...
+                </p>
                 <table>
                     <tr>
                         <td><i title="Email" class="fa-solid fa-envelope" style="color: #ffffff;"></i></th>
@@ -78,18 +90,18 @@
             </section>
         </main>
         <footer><div class="padding">
-            <table id="date">
+            <table id="timestamp">
                 <tr>
                     <td>Page created: 2023-&#8288;09-&#8288;26</td>
-                    <td>Last edit: 2023-&#8288;10-&#8288;15</td>
+                    <td>Last edit: 2023-&#8288;10-&#8288;18</td>
                 </tr>
             </table>
             <div id="copyright-notice">
-                <p>Unless stated otherwise, I am the author and/or copyright holder of all content of this website.
-                    <br>The CookieFox character (used in the header image and icon) is my OC. Character design and artwork courtesy of <a href="https://jackousz.carrd.co">Jackin</a>.
+                <p>Unless stated otherwise, I&nbsp;am the&nbsp;author and/or copyright holder of&nbsp;all&nbsp;content on&nbsp;this&nbsp;website.
+                    <br>The&nbsp;CookieFox character (used in&nbsp;the&nbsp;header image and&nbsp;icon) is&nbsp;my&nbsp;OC. Character design and&nbsp;artwork courtesy&nbsp;of <a href="https://jackousz.carrd.co">Jackin</a>.
                 </p>
-                <p>&copy; CookieFox 2023 – All rights reserved
-                    <br><a href="/index.html#contacts">Contact me</a> for any use of this website or its content.
+                <p>&copy; CookieFox 2023 &ndash; All rights reserved
+                    <br><a href="index.html#contacts">Contact me</a> for&nbsp;any&nbsp;use of&nbsp;this&nbsp;website or&nbsp;its&nbsp;content.
                 </p>
             </div>
             <p style="text-align: center; margin: 0;"><a href="#">Back to top</a></p>
